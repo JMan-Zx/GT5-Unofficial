@@ -128,7 +128,7 @@ public enum CombType {
     ORIHARUKON(98, "oriharukon", true, Materials.Oriharukon, 50, 0x228B22, 0x677D68, ItemComb.Voltage.IV),
     MYSTERIOUSCRYSTAL(99, "mysteriouscrystal", true, Materials.MysteriousCrystal, 45, 0x3CB371, 0x16856C,
         ItemComb.Voltage.LuV),
-    BLACKPLUTONIUM(100, "blackplutonium", true, Materials.Quantium, 25, 0x000000, 0x323232, ItemComb.Voltage.LuV),
+    BLACKPLUTONIUM(100, "blackplutonium", true, Materials.BlackPlutonium, 25, 0x000000, 0x323232, ItemComb.Voltage.LuV),
     TRINIUM(101, "trinium", true, Materials.Trinium, 25, 0xB0E0E6, 0xC8C8D2, ItemComb.Voltage.ZPM),
 
     // Planet
@@ -156,17 +156,17 @@ public enum CombType {
     INFINITY(119, "infinity", true, Materials.Infinity, 1, 0xFFFFFF, 0xFFFFFF, ItemComb.Voltage.UEV),
 
     // HEE
-    ENDDUST(120, "enddust", true, Materials._NULL, 50, 0x003A7D, 0xCC00FA, ItemComb.Voltage.HV),
-    ECTOPLASMA(121, "ectoplasma", true, Materials._NULL, 35, 0x381C40, 0xDCB0E5, ItemComb.Voltage.EV),
-    ARCANESHARD(122, "arcaneshard", true, Materials._NULL, 35, 0x333D82, 0x9010AD, ItemComb.Voltage.EV),
+    ENDDUST(120, "end Dust", true, Materials._NULL, 50, 0x003A7D, 0xCC00FA, ItemComb.Voltage.HV),
+    ECTOPLASMA(121, "ectoplasmic", true, Materials._NULL, 35, 0x381C40, 0xDCB0E5, ItemComb.Voltage.EV),
+    ARCANESHARD(122, "arcane Shard", true, Materials._NULL, 35, 0x333D82, 0x9010AD, ItemComb.Voltage.EV),
     STARDUST(123, "stardust", true, Materials._NULL, 60, 0xDCBE13, 0xffff00, ItemComb.Voltage.HV),
-    DRAGONESSENCE(124, "dragonessence", true, Materials._NULL, 30, 0x911ECE, 0xFFA12B, ItemComb.Voltage.IV),
+    DRAGONESSENCE(124, "dragon Essence", true, Materials._NULL, 30, 0x911ECE, 0xFFA12B, ItemComb.Voltage.IV),
     ENDERMAN(125, "enderman", true, Materials._NULL, 25, 0x6200e7, 0x161616, ItemComb.Voltage.IV),
     SILVERFISH(126, "silverfish", true, Materials._NULL, 25, 0x0000000, 0xEE053D, ItemComb.Voltage.EV),
     ENDIUM(127, "endium", true, Materials.HeeEndium, 50, 0x2F5A6C, 0xa0ffff, ItemComb.Voltage.HV),
-    RUNEI(128, "rune1", true, Materials._NULL, 10, 0x0104D9, 0xE31010, ItemComb.Voltage.IV),
-    RUNEII(129, "rune2", true, Materials._NULL, 10, 0xE31010, 0x0104D9, ItemComb.Voltage.IV),
-    FIREESSENSE(130, "fireessence", true, Materials._NULL, 30, 0xFFA157, 0xD41238, ItemComb.Voltage.IV),
+    RUNEI(128, "basic Rune", true, Materials._NULL, 10, 0x0104D9, 0xE31010, ItemComb.Voltage.IV),
+    RUNEII(129, "advanced Rune", true, Materials._NULL, 10, 0xE31010, 0x0104D9, ItemComb.Voltage.IV),
+    FIREESSENSE(130, "fiery Essence", true, Materials._NULL, 30, 0xFFA157, 0xD41238, ItemComb.Voltage.IV),
     CRYOLITE(131, "cryolite", true, Materials.Cryolite, 90, 0xBFEFFF, 0x73B9D0, ItemComb.Voltage.LV),
     // (NOBLE) GAS LINE
     HELIUM(132, "helium", true, Materials.Helium, 90, 0xFFA9FF, 0xFFFFC3, ItemComb.Voltage.HV),

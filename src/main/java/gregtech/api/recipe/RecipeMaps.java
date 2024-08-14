@@ -22,6 +22,7 @@ import static gregtech.api.util.GT_Utility.getFluidForFilledItem;
 import static gregtech.api.util.GT_Utility.isArrayEmptyOrNull;
 import static gregtech.api.util.GT_Utility.isArrayOfLength;
 import static gregtech.api.util.GT_Utility.multiplyStack;
+import static gregtech.common.tileentities.machines.multi.nanochip.util.RecipeHandlers.assemblyMatrixRecipeTransformer;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -80,7 +81,6 @@ import gregtech.api.util.GT_Recipe;
 import gregtech.api.util.GT_RecipeConstants;
 import gregtech.api.util.GT_RecipeMapUtil;
 import gregtech.api.util.GT_Utility;
-import gregtech.common.tileentities.machines.multi.nanochip.modules.AssemblyMatrix;
 import gregtech.common.tileentities.machines.multi.purification.PurifiedWaterHelpers;
 import gregtech.nei.formatter.FuelSpecialValueFormatter;
 import gregtech.nei.formatter.FusionSpecialValueFormatter;
@@ -1290,8 +1290,7 @@ public final class RecipeMaps {
                             .addDenseLiquidRecipe(r))
                     .map(Collections::singletonList)
                     .orElse(Collections.emptyList())));
-
         // Add transformer from circuit assembler recipes to nanochip assembly matrix recipe
-        RecipeMaps.circuitAssemblerRecipes.addDownstream(AssemblyMatrix.recipeTransformer);
+        RecipeMaps.circuitAssemblerRecipes.addDownstream(assemblyMatrixRecipeTransformer);
     }
 }

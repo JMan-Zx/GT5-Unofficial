@@ -1477,6 +1477,7 @@ public enum ItemList implements IItemContainer {
 
     Machine_Multi_Lathe,
     Machine_Multi_NanochipAssemblyComplex,
+    NanoChipModule_AssemblyMatrix,
 
     Machine_LV_Miner,
     Machine_MV_Miner,

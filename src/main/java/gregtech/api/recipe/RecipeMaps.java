@@ -1279,6 +1279,36 @@ public final class RecipeMaps {
         .minInputs(0, 0)
         .disableOptimize()
         .build();
+    public static final RecipeMap<RecipeMapBackend> nanochipBoardProcessorRecipes = RecipeMapBuilder
+        .of("gt.recipe.nanochip.boardprocessor")
+        .maxIO(2, 1, 2, 0)
+        .minInputs(0, 0)
+        .disableOptimize()
+        .build();
+    public static final RecipeMap<RecipeMapBackend> nanochipEtchingArray = RecipeMapBuilder
+        .of("gt.recipe.nanochip.etchingarray")
+        .maxIO(2, 1, 2, 0)
+        .minInputs(0, 0)
+        .disableOptimize()
+        .build();
+    public static final RecipeMap<RecipeMapBackend> nanochipCuttingChamber = RecipeMapBuilder
+        .of("gt.recipe.nanochip.cuttingchamber")
+        .maxIO(2, 1, 2, 0)
+        .minInputs(0, 0)
+        .disableOptimize()
+        .build();
+    public static final RecipeMap<RecipeMapBackend> nanochipWireTracer = RecipeMapBuilder
+        .of("gt.recipe.nanochip.wiretracer")
+        .maxIO(2, 1, 2, 0)
+        .minInputs(0, 0)
+        .disableOptimize()
+        .build();
+    public static final RecipeMap<RecipeMapBackend> nanochipSuperconductorSplitter = RecipeMapBuilder
+        .of("gt.recipe.nanochip.superconductorsplitter")
+        .maxIO(2, 1, 2, 0)
+        .minInputs(0, 0)
+        .disableOptimize()
+        .build();
 
     static {
         RecipeMaps.centrifugeRecipes.addDownstream(RecipeMaps.centrifugeNonCellRecipes.deepCopyInput());

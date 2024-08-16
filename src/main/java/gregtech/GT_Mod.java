@@ -85,7 +85,6 @@ import gregtech.common.misc.spaceprojects.commands.SPM_Command;
 import gregtech.common.misc.spaceprojects.commands.SP_Command;
 import gregtech.common.misc.spaceprojects.commands.SpaceProject_Command;
 import gregtech.common.tileentities.machines.GT_MetaTileEntity_Hatch_CraftingInput_ME;
-import gregtech.common.tileentities.machines.multi.nanochip.util.ComponentConversionMap;
 import gregtech.common.tileentities.machines.multi.nanochip.util.RecipeHandlers;
 import gregtech.common.tileentities.storage.GT_MetaTileEntity_DigitalChestBase;
 import gregtech.crossmod.holoinventory.HoloInventory;
@@ -561,10 +560,6 @@ public class GT_Mod implements IGT_Mod {
 
         GT_PostLoad.addSolidFakeLargeBoilerFuels();
         GT_PostLoad.identifyAnySteam();
-
-        // Load circuit component map
-        // TODO: maybe find a better place for this
-        ComponentConversionMap.load();
 
         achievements = new GT_Achievements();
 

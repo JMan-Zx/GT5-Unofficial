@@ -81,6 +81,10 @@ import gregtech.api.util.GT_Recipe;
 import gregtech.api.util.GT_RecipeConstants;
 import gregtech.api.util.GT_RecipeMapUtil;
 import gregtech.api.util.GT_Utility;
+import gregtech.common.tileentities.machines.multi.nanochip.GT_MetaTileEntity_NanochipAssemblyComplex;
+import gregtech.common.tileentities.machines.multi.nanochip.modules.AssemblyMatrix;
+import gregtech.common.tileentities.machines.multi.nanochip.modules.SMDProcessor;
+import gregtech.common.tileentities.machines.multi.nanochip.util.CircuitComponent;
 import gregtech.common.tileentities.machines.multi.purification.PurifiedWaterHelpers;
 import gregtech.nei.formatter.FuelSpecialValueFormatter;
 import gregtech.nei.formatter.FusionSpecialValueFormatter;
@@ -1264,6 +1268,13 @@ public final class RecipeMaps {
         .maxIO(1, 1, 0, 0)
         .minInputs(1, 0)
         .disableOptimize()
+        .recipeTransformer(recipe -> {
+            // Register fallback localized name based on input item
+            ItemStack input = recipe.mInputs[0];
+            CircuitComponent output = CircuitComponent.getFromFakeStack(recipe.mOutputs[0]);
+            GT_MetaTileEntity_NanochipAssemblyComplex.registerLocalName(input, output);
+            return recipe;
+        })
         .build();
 
     public static final RecipeMap<RecipeMapBackend> nanochipAssemblyMatrixRecipes = RecipeMapBuilder
@@ -1271,6 +1282,13 @@ public final class RecipeMaps {
         .maxIO(9, 1, 4, 0)
         .minInputs(0, 0)
         .disableOptimize()
+        .recipeTransformer(recipe -> {
+            CircuitComponent output = CircuitComponent.getFromFakeStack(recipe.mOutputs[0]);
+            if (output.realCircuit != null) {
+                AssemblyMatrix.registerLocalName(output.realCircuit, output);
+            }
+            return recipe;
+        })
         .build();
 
     public static final RecipeMap<RecipeMapBackend> nanochipSMDProcessorRecipes = RecipeMapBuilder
@@ -1278,6 +1296,12 @@ public final class RecipeMaps {
         .maxIO(2, 1, 2, 0)
         .minInputs(0, 0)
         .disableOptimize()
+        .recipeTransformer(recipe -> {
+            CircuitComponent output = CircuitComponent.getFromFakeStack(recipe.mOutputs[0]);
+            CircuitComponent input = CircuitComponent.getFromFakeStack(recipe.mInputs[0]);
+            SMDProcessor.registerLocalName(input.getLocalizedName(), output);
+            return recipe;
+        })
         .build();
     public static final RecipeMap<RecipeMapBackend> nanochipBoardProcessorRecipes = RecipeMapBuilder
         .of("gt.recipe.nanochip.boardprocessor")
